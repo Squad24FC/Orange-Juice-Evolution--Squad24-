@@ -1,0 +1,9 @@
+<h1>Trilhas</h1> <%= link_to 'Criar trilha', new_track_path %>
+
+<p>Essa é a página que vai conter todas as trilhas</p>
+
+<ul>
+  <% @tracks.each do |track|  %>
+  <li><%= track.name %> | <%=  link_to 'Editar', edit_track_path(track) %> | <%= link_to 'Remover', track_path(track), method: :delete, data: {confirm: 'Are you sure?'} %></li>
+  <% end  %>
+</ul>
