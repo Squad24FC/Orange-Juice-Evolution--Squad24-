@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_11_184751) do
+ActiveRecord::Schema.define(version: 2022_11_11_192456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(version: 2022_11_11_184751) do
     t.string "thumb_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "track_id", null: false
+    t.index ["track_id"], name: "index_chapters_on_track_id"
+  end
+
+  create_table "enrollments", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "track_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["track_id"], name: "index_enrollments_on_track_id"
+    t.index ["user_id"], name: "index_enrollments_on_user_id"
   end
 
   create_table "lessons", force: :cascade do |t|
@@ -30,12 +41,16 @@ ActiveRecord::Schema.define(version: 2022_11_11_184751) do
     t.string "source_url", default: "", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "subject_id", null: false
+    t.index ["subject_id"], name: "index_lessons_on_subject_id"
   end
 
   create_table "subjects", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "chapter_id", null: false
+    t.index ["chapter_id"], name: "index_subjects_on_chapter_id"
   end
 
   create_table "tracks", force: :cascade do |t|
@@ -61,4 +76,9 @@ ActiveRecord::Schema.define(version: 2022_11_11_184751) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "chapters", "tracks"
+  add_foreign_key "enrollments", "tracks"
+  add_foreign_key "enrollments", "users"
+  add_foreign_key "lessons", "subjects"
+  add_foreign_key "subjects", "chapters"
 end
