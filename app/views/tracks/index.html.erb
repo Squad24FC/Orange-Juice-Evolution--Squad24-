@@ -4,6 +4,6 @@
 
 <ul>
   <% @tracks.each do |track|  %>
-  <li><%= track.name %> | <%=  link_to 'Editar', edit_track_path(track) %> | <%= link_to 'Remover', track_path(track), method: :delete, data: {confirm: 'Are you sure?'} %></li>
+  <li><%= link_to track.name, track_path(track) %> | <%=  link_to 'Editar', edit_track_path(track) %> | <%= link_to 'Remover', track_path(track), method: :delete, data: {confirm: 'Are you sure?'} %></li>
   <% end  %>
 </ul>
