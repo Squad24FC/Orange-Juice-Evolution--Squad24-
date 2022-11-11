@@ -16,21 +16,19 @@ ActiveRecord::Schema.define(version: 2022_11_10_205901) do
   enable_extension "plpgsql"
 
   create_table "lessons", force: :cascade do |t|
-    t.string "name"
-    t.string "lesson_type"
-    t.string "author"
-    t.integer "duration"
-    t.string "section"
-    t.string "subject"
-    t.string "source"
+    t.string "name", default: "", null: false
+    t.string "lesson_type", default: "", null: false
+    t.string "author", default: "", null: false
+    t.integer "duration", null: false
+    t.string "source_url", default: "", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "tracks", force: :cascade do |t|
-    t.string "name"
-    t.string "icon"
-    t.text "description"
+    t.string "name", default: "", null: false
+    t.string "thumb_url", default: "", null: false
+    t.text "description", default: "", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -38,6 +36,9 @@ ActiveRecord::Schema.define(version: 2022_11_10_205901) do
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.integer "role", default: 0, null: false
+    t.string "first_name", default: "", null: false
+    t.string "last_name", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
