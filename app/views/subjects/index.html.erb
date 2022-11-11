@@ -1,0 +1,9 @@
+<h1>Assuntos/Tópicos</h1> <%= link_to 'Criar Tópico', new_subject_path %>
+
+<p>Essa é a página que vai conter todas os tópicos</p>
+
+<ul>
+  <% @subjects.each do |subject|  %>
+  <li><%= subject.name %> | <%=  link_to 'Editar', edit_subject_path(subject) %> | <%= link_to 'Remover', subject_path(subject), method: :delete, data: {confirm: 'Are you sure?'} %></li>
+  <% end  %>
+</ul>
