@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :tracks
   resources :lessons
   resources :subjects
+  resources :chapters
 
   root to: 'tracks#index'
 end
