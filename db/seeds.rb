@@ -41,6 +41,12 @@ Track.new([{
                                                supplemental: true,
                                                random_words_to_add: 4)
           }])
+          # =========== Subjects ===========
+
+          20.times do
+            Subject.new([{ name: Faker::Book.title }])
+          end
+
 # =========== Chapters ===========
 
 10.times do
@@ -52,16 +58,10 @@ Track.new([{
               }])
 end
 
-# =========== Subjects ===========
-
-20.times do
-  Subject.new([{ name: Faker::Book.title }])
-end
-
 # =========== Lessons ===========
 
 100.times do
-  Subject.new([{
+  Lesson.new([{
                 name: Faker::Book.title,
                 lesson_type: rand(1..4),
                 author: Faker::Book.author,
