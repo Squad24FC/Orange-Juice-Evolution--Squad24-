@@ -1,10 +1,11 @@
-<%# <h1>Aula</h1> <%= link_to 'Criar aula', new_lesson_path %>
 <h1>Aula</h1>
 
-<p>Essa é a página que vai conter todas as aulas</p>
-
-<ul>
-  <% @lessons.each do |lesson|  %>
-  <li><%= lesson.name %></li>
+<% @subjects.each do |subject| %>
+  <h4><%= subject.name %></h4>
+  <ul>
+  <% subject.lessons.each do |lesson| %>
+    <li><%= lesson.name %> | <%= "#{lesson.duration} minutos" %> | <%= lesson.lesson_type %></li>
   <% end %>
+  </ul>
+<% end %>
 </ul>

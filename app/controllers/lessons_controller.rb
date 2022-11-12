@@ -44,6 +44,7 @@ class LessonsController < ApplicationController
 
   def get_subject
     @subject = Subject.find(params[:subject_id])
+    @subjects = Subject.all
   end
 
   private
