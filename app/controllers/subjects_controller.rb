@@ -1,48 +1,55 @@
 class SubjectsController < ApplicationController
-    def index
-        @subjects = Subject.all
-        end
+  before_action :get_chapter
 
-        def new
-        @subject = Subject.new
-        end
+  def index
+    @subjects = @chapter.subjects
+  end
 
-        def create
-        @subject = Subject.new(subject_params)
-        if @subject.save
-            redirect_to subject_path(@subject)
-        else
-            render :new
-        end
-        end
+  def new
+    @subject = @chapter.subjects.build
+  end
 
-        def show
-        @subject = Subject.find(params[:id])
-        end
+  def create
+    @subject = @chapter.subjects.build(subject_params)
+    if @subject.save
+      redirect_to chapter_subjects_path(@chapter)
+    else
+      render :new
+    end
+  end
 
-        def edit
-        @subject = Subject.find(params[:id])
-        end
+  def show
+    @subject = Subject.find(params[:id])
+  end
 
-        def update
-        @subject = Subject.find(params[:id])
-        if @subject.update(subject_params)
-            redirect_to subject_path(@subject)
-        else
-            render :new
-        end
-        end
+  def edit
+    @subject = Subject.find(params[:id])
+  end
 
-        def destroy
-        @subject = Subject.find(params[:id])
-        @subject.destroy
+  def update
+    @subject = Subject.find(params[:id])
+    if @subject.update(subject_params)
+      redirect_to chapter_subjects_path(@chapter)
+    else
+      render :new
+    end
+  end
 
-        redirect_to subjects_path
-        end
+  def destroy
+    @subject = Subject.find(params[:id])
+    @subject.destroy
 
-        private
+    redirect_to chapter_subjects_path
+  end
 
-        def subject_params
-        params.require(:subject).permit(:name)
-        end
+  def get_chapter
+    @chapter = Chapter.find(params[:chapter_id])
+    @chapters = Chapter.all
+  end
+
+  private
+
+  def subject_params
+    params.require(:subject).permit(:name)
+  end
 end
