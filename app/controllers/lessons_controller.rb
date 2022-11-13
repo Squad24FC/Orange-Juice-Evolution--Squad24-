@@ -1,5 +1,5 @@
 class LessonsController < ApplicationController
-  before_action :get_subject
+  before_action :get_subject, :get_chapter
 
   def index
     @lessons = @subject.lessons
@@ -44,7 +44,11 @@ class LessonsController < ApplicationController
 
   def get_subject
     @subject = Subject.find(params[:subject_id])
-    @subjects = Subject.all
+    # @subjects = Subject.all
+  end
+
+  def get_chapter
+    @chapter = Chapter.find(params[:chapter_id])
   end
 
   private
