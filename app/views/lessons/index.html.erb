@@ -1,11 +1,17 @@
-<h1>Aula</h1>
+<h1>Aulas sobre <%= @chapter.name %></h1>
 
-<% @subjects.each do |subject| %>
-  <h4><%= subject.name %></h4>
+<%= link_to 'Voltar para página anterior', :back %>
+
+
+  <h4><%= @subject.name %></h4>
   <ul>
-  <% subject.lessons.each do |lesson| %>
+  <% @subject.lessons.each do |lesson| %>
     <li><%= lesson.name %> | <%= "#{lesson.duration} minutos" %> | <%= lesson.lesson_type %></li>
   <% end %>
   </ul>
-<% end %>
-</ul>
+
+  
+
+
+
+

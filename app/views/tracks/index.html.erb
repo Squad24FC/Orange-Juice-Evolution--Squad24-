@@ -3,7 +3,10 @@
 <p>Essa é a página que vai conter todas as trilhas</p>
 
 <ul>
-  <% @tracks.each do |track|  %>
-  <li><%= link_to track.name, track_path(track) %> | <%=  link_to 'Editar', edit_track_path(track) %> | <%= link_to 'Remover', track_path(track), method: :delete, data: {confirm: 'Are you sure?'} %></li>
+  <% @tracks.each do |track|  %>  
+  <li> Nome: <%= link_to track.name, track_path(track) %> | <%=  link_to 'Editar', edit_track_path(track) %> | <%= link_to 'Remover', track_path(track), method: :delete, data: {confirm: 'Are you sure?'} %></li>
+  <li> Figura: <%= track.thumb_url %> </li>
+  <li> Descrição: <%= track.description %> </li>
+  ============================================================================
   <% end  %>
 </ul>
