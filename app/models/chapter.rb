@@ -1,4 +1,4 @@
 class Chapter < ApplicationRecord
-    has_many :track
+    belongs_to :track
     has_many :subjects
 end
