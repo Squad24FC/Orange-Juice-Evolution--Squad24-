@@ -1,9 +1,19 @@
-<h1>Capitulos</h1> <%= link_to 'Criar capitulo', new_chapter_path %>
+<h1>Capitulos</h1>
 
 <p>Essa é a página que vai conter todos os capitulos</p>
 
-<ul>
-  <% @chapters.each do |chapter|  %>
-  <li><%= chapter.name %> | <%=  link_to 'Editar', edit_chapter_path(chapter) %> | <%= link_to 'Remover', chapter_path(chapter), method: :delete, data: {confirm: 'Are you sure?'} %></li>
-  <% end  %>
-</ul>
+
+<% @chapters.each do |chapter| %>
+  <h3> <%= chapter.name %></h3>
+    <ul>
+      <% chapter.subjects.each do |subject| %>
+  
+  <%
+=begin%>
+ <li><%= chapter.name %> | <%=  link_to 'Editar', edit_chapter_path(chapter) %> | <%= link_to 'Remover', chapter_path(chapter), method: :delete, data: {confirm: 'Are you sure?'} %></li> 
+<%
+=end%>
+        <li><%= subject.name %></li>
+      <% end  %>
+    </ul>
+<% end  %>

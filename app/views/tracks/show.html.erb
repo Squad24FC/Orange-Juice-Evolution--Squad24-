@@ -1,5 +1,12 @@
-<p><%= @track.name %></p>
-<p><%= @track.thumb_url %></p>
-<p><%= @track.description %></p>
+<h1>Trilha <%= @track.name %></h1>
+
+<% @track.chapters.each do |chapter| %>
+  <h3>Capítulo: <%= chapter.name %></h3>  
+      <ul>
+        <% chapter.subjects.each do |subject|  %>
+        <li> Assunto: <%= link_to subject.name, track_chapter_subject_lessons_path(@track,chapter,subject) %></li>
+        <% end  %>
+      </ul>
+<% end  %>
 
 <%= link_to 'Voltar para home', root_path %>

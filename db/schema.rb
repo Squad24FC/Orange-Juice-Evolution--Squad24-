@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2022_11_11_192456) do
 
   create_table "lessons", force: :cascade do |t|
     t.string "name", default: "", null: false
-    t.string "lesson_type", default: "", null: false
+    t.integer "lesson_type", null: false
     t.string "author", default: "", null: false
     t.integer "duration", null: false
     t.string "source_url", default: "", null: false
