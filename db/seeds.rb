@@ -41,11 +41,6 @@ Track.create([{
                                                supplemental: true,
                                                random_words_to_add: 4)
           }])
-          # =========== Subjects ===========
-
-          20.times do
-            Subject.create([{ name: Faker::Book.title }])
-          end
 
 # =========== Chapters ===========
 
@@ -53,9 +48,17 @@ Track.create([{
   Chapter.create([{
                 name: Faker::Book.title,
                 thumb_url: 'https://picsum.photos/200',
-                track_id: rand(1..Track.all.count),
-                subject_id: rand(1..Subject.all.count)
+                track_id: rand(1..Track.all.count)    
               }])
+end
+
+# =========== Subjects ===========
+
+20.times do
+  Subject.create([{ 
+                name: Faker::Book.title,
+                chapter_id: rand(1..Chapter.all.count)                       
+                }])
 end
 
 # =========== Lessons ===========
@@ -66,6 +69,7 @@ end
                 lesson_type: rand(1..4),
                 author: Faker::Book.author,
                 duration: rand(3..120),
-                source_url: Faker::Internet.url
+                source_url: Faker::Internet.url,
+                subject_id: rand(1..Subject.all.count) 
               }])
 end
