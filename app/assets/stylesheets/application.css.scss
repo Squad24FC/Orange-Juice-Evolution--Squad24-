@@ -1,0 +1,108 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ :root {
+
+  // Colors
+  --body-color:#F1F1F1;
+  --orange-100: #FF531A;
+  --yellow-100: #FFA723;
+  --gray-90: #0A0708;
+
+  --text-color: #0A0708;
+  --title-color: #444444;
+
+
+  // Typo
+  --default-font: "Montserrat", sans-serif;
+
+  // Font Size
+  --biggest: 3rem;
+  --h1: 2.25rem;
+  --h2: 1.5rem;
+  --h3: 1.25rem;
+  --text: 1rem;
+  --small: .875rem;
+  --smallest: .813rem;
+
+  // Font Weight
+  --light: 300;
+  --medium: 400;
+  --bold: 700;
+
+  // BASE
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body,
+  button,
+  input,
+  textarea {
+    font-size: var(--text);
+    font-family: var(--default-font);
+    color: var(--text-color);
+  }
+
+  body {
+    background: var(--body-color);
+    font-size: var(--text);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: var(--bold);
+    color: var(--title-color);
+  }
+
+  h1 {
+    font-size: var(--h1);
+  }
+
+  h2 {
+    font-size: var(--h2);
+  }
+
+  h3 {
+    font-size: var(--h3);
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+
+ }
