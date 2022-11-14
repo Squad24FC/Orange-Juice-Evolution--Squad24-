@@ -1,17 +1,38 @@
-<h1>Aulas sobre <%= @chapter.name %></h1>
+<div class="lessons-container flex">
+  <section class="lessons-content">
+    <%= link_to '←', :back, style:'back-button' %>
+    <% @subject.lessons.each do |lesson| %>
+    <h2><%= lesson.name %></h2>
+    <p class='lesson-description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ullam eveniet veritatis expedita consequatur recusandae ex illum impedit aliquam, cupiditate est similique quaerat, porro vel. Maiores commodi ullam consectetur voluptatibus!</p>
+    <hr>
+    <div class="lesson-info-detail">
+      <p><b>Tipo de Mídia</b></p>
+      <p><%= lesson.lesson_type %></p>
+    </div>
+    <hr>
+    <div class="lesson-info-detail">
+      <p><b>Autor</b></p>
+      <p><%= lesson.author %></p>
+    </div>
+    <hr>
+    <%= link_to 'Iniciar aula', "http://#{lesson.source_url}", :class => "button-start-lesson" %>
+    <% end %>
+  </section>
+  <section>
+    <p class='lesson-breadcrumb'><%= @chapter.name %> > <%= @subject.name %></p>
+    <div class="lessons-list">
 
-<%= link_to 'Voltar para página anterior', :back %>
+      <% @subject.lessons.each do |lesson| %>
+      <div class="lesson-card">
+        <i class="fa-solid fa-circle-check check-icon"></i>
+        <div class="lesson-info">
+          <p class="lesson-card-title"><%= lesson.name %></p>
+          <p class="lesson-length"><%= "#{lesson.duration} minutos" %></p>
+        </div>
+        <i class="fa-solid fa-newspaper type-icon"></i>
+      </div>
+      <% end %>
 
-
-  <h4><%= @subject.name %></h4>
-  <ul>
-  <% @subject.lessons.each do |lesson| %>
-    <li><%= lesson.name %> | <%= "#{lesson.duration} minutos" %> | <%= lesson.lesson_type %></li>
-  <% end %>
-  </ul>
-
-  
-
-
-
-
+    </div>
+  </section>
+</div>

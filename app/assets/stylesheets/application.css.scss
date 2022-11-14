@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ @import "font-awesome";
+
+
+ @import "lessons.scss";
 
  :root {
 
@@ -21,6 +25,9 @@
   --orange-100: #FF531A;
   --yellow-100: #FFA723;
   --gray-90: #0A0708;
+  --gray-10: #f4f4f4;
+
+  --card-background: #fff;
 
   --text-color: #0A0708;
   --title-color: #444444;
@@ -45,8 +52,8 @@
 
   // BASE
   * {
-    margin: 0;
-    padding: 0;
+    // margin: 0;
+    // padding: 0;
     box-sizing: border-box;
   }
 
@@ -64,7 +71,7 @@
   }
 
   body {
-    background: var(--body-color);
+    // background: var(--body-color);
     font-size: var(--text);
   }
 
