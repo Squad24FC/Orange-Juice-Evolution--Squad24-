@@ -15,10 +15,16 @@
  */
  @import "font-awesome";
 
+ @import "./components/header_track_name";
 
  @import "lessons.scss";
 
+
  :root {
+
+  // Screen
+  --default--screen-width: 1440; /*px*/
+  --width-ratio: calc(100vw / var(--default--screen-width));
 
   // Colors
   --body-color:#F1F1F1;

@@ -1,0 +1,27 @@
+.header-track-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #131313A6;
+    color: white;
+    font-size: var(--h1);
+    height: 120px ;
+    width: 100%;
+}
+
+.header-track-name figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 90%;
+    gap: 2%;
+}
+
+.header-track-name img {
+    width: 109px;
+}
+
+.header-track-name figcaption {
+    text-align: center;
+}

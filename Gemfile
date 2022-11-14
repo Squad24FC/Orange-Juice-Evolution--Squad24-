@@ -62,4 +62,3 @@ gem 'devise'
 gem 'faker'
 
 gem "font-awesome-sass", "~> 6.2.0"
-

@@ -66,7 +66,7 @@ end
 100.times do
   Lesson.create([{
                 name: Faker::Book.title,
-                lesson_type: rand(1..4),
+                lesson_type: rand(0..7),
                 author: Faker::Book.author,
                 duration: rand(3..120),
                 source_url: Faker::Internet.url,

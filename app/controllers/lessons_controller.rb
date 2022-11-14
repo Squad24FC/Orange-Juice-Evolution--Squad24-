@@ -3,6 +3,7 @@ class LessonsController < ApplicationController
 
   def index
     @lessons = @subject.lessons
+    @track = @lessons[0].subject.chapter.track
   end
 
   def new
