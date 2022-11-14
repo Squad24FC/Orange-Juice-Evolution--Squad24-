@@ -19,6 +19,8 @@ class TracksController < ApplicationController
 
   def show
     @track = Track.find(params[:id])
+    @completed = false
+    @lessons_types = []
   end
 
   def edit
