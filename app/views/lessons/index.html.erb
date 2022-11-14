@@ -1,3 +1,4 @@
+<%= render partial: "shared/header_track_name.html" %>
 <h1>Aulas sobre <%= @chapter.name %></h1>
 
 <%= link_to 'Voltar para página anterior', :back %>
@@ -5,7 +6,7 @@
 
   <h4><%= @subject.name %></h4>
   <ul>
-  <% @subject.lessons.each do |lesson| %>
+  <% @subject.lessons.each do |lesson| %>  
     <li><%= lesson.name %> | <%= "#{lesson.duration} minutos" %> | <%= lesson.lesson_type %></li>
   <% end %>
   </ul>
