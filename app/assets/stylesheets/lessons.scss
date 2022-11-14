@@ -1,3 +1,93 @@
 // Place all the styles related to the Lessons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.lessons-container {
+  max-width: 1200px;
+  margin: 100px auto auto auto;
+  background-color: white;
+  padding: 3rem;
+}
+
+.flex {
+  display: flex;
+  gap: 3rem;
+}
+
+.back-button {
+  font-weight: var(--bold);
+}
+
+.lessons-content {
+  min-width: 500px;
+}
+
+.lesson-breadcrumb {
+  font-weight: var(--bold);
+  font-size: var(--small);
+}
+
+.lesson-content-title {
+  font-size: var(--h1);
+}
+
+.lesson-info-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lesson-description {
+  font-size: var(--text);
+}
+
+.lessons-list {
+  min-width: 450px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-card {
+  background-color: var(--card-background);
+  padding: 1rem;
+  display: flex;
+  // align-items: center;
+  gap: 1.5rem;
+  border: 1px solid var(--gray-10);
+}
+
+.lesson-info {
+  flex-grow: 2
+}
+
+.lesson-info, .lesson-card-title, .lesson-length {
+  margin: 0;
+  padding: 0;
+}
+
+.lesson-card-title {
+  font-size: var(--text);
+  font-weight: var(--bold);
+}
+.lesson-length {
+  margin-top: .25rem;
+  font-size: var(--small);
+}
+
+.check-icon {
+  color: var(--gray-10);
+  font-size: 1.25rem;
+
+  &:hover {
+    color: var(--orange-100);
+  }
+}
+
+.button-start-lesson {
+  background-color: var(--orange-100);
+  text-align: center;
+  display: block;
+  color: white;
+  font-weight: var(--bold);
+  padding: 1rem;
+  margin-top: 2rem;
+  border: 0;
+}
