@@ -79,13 +79,14 @@
   body {
     // background: var(--body-color);
     font-size: var(--text);
+    margin: 0;
   }
 
   h1,
   h2,
   h3 {
     font-weight: var(--bold);
-    color: var(--title-color);
+    // color: var(--title-color);
   }
 
   h1 {

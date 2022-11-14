@@ -1,11 +1,12 @@
-.track-show-main {
-    
+
+.track-show-main {   
+    background: var(--body-color); 
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 101px;
+    padding-top: 101px;
 }
 
 .track-show-content {
@@ -19,18 +20,19 @@
 
 .track-show-heading {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width:  360px;
+    width:  100%;
     border-bottom: 8px solid var(--orange-100);
+    text-align: center;
     
 }
 
 .track-show-heading h2{
+    flex: 1;
+    padding-right: 5%;
     color: var(--orange-100);   
-    margin: 4% 0; 
+    margin: 3% 0; 
 }
 
 .track-show-chapters-subjects {
@@ -82,8 +84,8 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-between;
-    gap: 5%;
+    justify-content: space-around;
+    gap: 3%;
 }
 
 
@@ -105,7 +107,7 @@
     }
 
     .track-show-main {
-        margin-top: calc( var(--width-ratio) * 101 );
+        padding-top: calc( var(--width-ratio) * 101 );
     }
 
     .track-show-chapters {
