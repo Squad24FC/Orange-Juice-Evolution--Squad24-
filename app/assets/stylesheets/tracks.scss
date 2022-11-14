@@ -1,3 +1,309 @@
-// Place all the styles related to the tracks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#my-track-header {
+    display: flex;
+    background: white ;
+    padding: 60px;
+    text-indent: 20vh;
+    height: 100%;
+    width: 100%;
+    
+    font-family: var(--default-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 61px;
+    
+    color: #000000;
+}
+
+.main-container {
+    display: flex;
+    max-width: 100%;
+    background: white ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: fit-content;
+    font-family: var(--default-font);
+    font-style: normal;
+}
+
+.tracks-container {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#show-track {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2%;
+    justify-content: flex-start;
+}
+
+.track-name {
+    font-family: var(--default-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+
+}
+
+p{
+    display: flex;
+    min-width: 284px;
+    min-height: 64px;
+    align-items: center;
+}
+
+.image-url{
+    width: 365px;
+    height: 324px;
+    left: 360px;
+    top: 406px;
+    border-radius: 5%;
+}
+
+.fa-brands,.fa-youtube,
+.fa-solid, .fa-spotify, 
+.fa-twitch, .fa-discord,
+.fa-twitch {
+    left: 0%;
+    right: 0%;
+    top: 12.5%;
+    bottom: 12.5%;
+
+    color: #FF5A23;
+    border-radius: 10%;
+    margin: 0.5rem;
+
+    text-align: end; 
+
+}
+
+.extra-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50% 0 60vh;
+    min-width: 50%;
+    max-width: 100%;
+}
+
+
+.study-room-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+    width: 284px;
+    height: 75px;
+    
+    
+    font-family: var(--default-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    
+    color: #000000;
+}
+
+.community-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    width: 190px;
+    left: 917px;
+    top: 1123px;
+    
+    font-family: var(--default-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    
+    color: #000000;
+} 
+#p-title-study-room{
+    width: 354px;
+}
+.p-title-community-content,
+#p-title-study-room {
+    display: flex;
+    height: 64px;
+    left: 268px;
+    top: 1080px;
+
+    font-family: var(--default-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    
+}
+
+#title-study-room, #title-community-content {
+    display: flex;
+    min-width: 493px;
+    width: 370px;
+    height: 51px;
+    left: 131px;
+    top: 960px;
+    
+    font-family: var(--default-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 51px;
+
+    color: #000000;
+}
+
+
+div section {
+    margin: 3%;
+}
+
+
+@media(max-width: 1024px) {
+    
+    #my-track-header {
+        width: 100%;
+        height: 55px;
+        left: 12px;
+        top: 97px;
+        
+        font-family: var(--default-font);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 22px;
+        text-indent: 0%;
+        
+        
+        display: flex;
+        align-items: flex-start;
+        text-align: start;
+        letter-spacing: -0.408px;
+        
+        color: #000000;
+    
+        }
+    
+    .track-name{
+        width: 234px;
+        height: 55px;
+        left: 83px;
+        top: 323px;
+    
+        font-family: var(--default-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 22px;
+    
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.408px;
+    
+        color: #000000;
+    }
+    
+    .main-container,
+    #show-track {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .tracks-container {
+        flex-direction: column;
+    }
+
+    .image-url {
+        width: 140px;
+        height: 150px;
+        left: 130px;
+        top: 587px;
+    }
+
+    .extra-container {
+        flex-direction: column;
+        
+        padding: 0;
+    }
+
+    .study-room-container,
+    .community-content-container {
+        display: flex;
+        margin-bottom: 125px;
+        align-items: flex-start;
+        text-align: start;
+        letter-spacing: -0.408px;
+        
+        width: 315px;
+        left: 12px;
+        top: 97px;
+        
+        font-family: var(--default-font);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 22px;
+        text-indent: 0%;
+        
+        color: #000000;
+    }
+
+    #title-study-room, 
+    #title-community-content {
+        width: 315px;
+        height: 55px;
+        left: 12px;
+        top: 97px;
+        
+        font-family: var(--default-font);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 22px;
+        text-indent: 0%;
+        
+        
+        display: flex;
+        align-items: flex-start;
+        text-align: start;
+        letter-spacing: -0.408px;
+        
+        color: #000000;
+    }
+
+    #p-title-study-room,
+    .p-title-community-content{
+        width: 248px;
+        height: 55px;
+        left: 69px;
+        top: 737px;
+        
+        font-style: normal;
+        font-family: var(--default-font);
+        font-size: 20px;
+        line-height: 22px;
+        font-weight: 500;
+    
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.408px;
+        
+        color: #000000;
+    }
+}
