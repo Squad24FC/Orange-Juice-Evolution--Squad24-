@@ -60,3 +60,5 @@ gem 'net-smtp'
 gem 'devise'
 
 gem 'faker'
+
+gem "font-awesome-sass"
