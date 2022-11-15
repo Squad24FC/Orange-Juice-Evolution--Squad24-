@@ -7,7 +7,7 @@
 
     <section class = "track-show-heading">
     <%= link_to '←', root_path , style:'back-button' %>
-    <h2> CONTEÚDO </h2> 
+    <h2> CONTEÚDO </h2>
     </section>
 
     <section class = "track-show-chapters-subjects">
@@ -19,39 +19,38 @@
               <% chapter.subjects.each do |subject|  %>
               <% @lessons_types.clear %>
               <li>
-                <div class = "track-show-subjects-check"> 
+                <div class = "track-show-subjects-check">
                   <% subject.lessons.each do | lesson | %>
                   <% @chapter_completed = lesson.completed %>
                   <% end %>
-                  <% if @chapter_completed %>                    
-                    <i class="fa-regular fa-circle-check fa-2x"></i>
-                  <% else %>                    
-                    <i class="fa-regular fa-circle fa-2x"></i>
+                  <% if @chapter_completed %>
+                    <i class="fa-solid fa-circle-check check-icon-done"></i>
+                  <% else %>
+                    <i class="fa-solid fa-circle-check check-icon"></i>
                   <% end %>
-                </div>  
+                </div>
                 <%= link_to subject.name, track_chapter_subject_lessons_path(@track,chapter,subject) %>
-                
+
                 <div class = "track-show-subjects-type">
                   <% subject.lessons.each do | lesson | %>
                   <% @lessons_types.append(lesson.lesson_type_before_type_cast) %>
                   <% end %>
                   <% if (@lessons_types.any?(4..6) ) %>
-                    <i class="fa-regular fa-circle-play fa-2x"></i>                                                        
+                    <i class="fa-regular fa-circle-play"></i>
                   <% end %>
                   <% if (@lessons_types.any?(0..3)) %>
-                    <i class="fa-regular fa-file-lines fa-2x"></i>                                                        
-                  <% end %>                  
-                  <% if (@lessons_types.any?(7) ) %>
-                    <i class="fa-sharp fa-solid fa-headphones fa-2x"></i>                                                        
+                    <i class="fa-regular fa-file-lines"></i>
                   <% end %>
-                </div>                             
+                  <% if (@lessons_types.any?(7) ) %>
+                    <i class="fa-sharp fa-solid fa-headphones"></i>
+                  <% end %>
+                </div>
               </li>
-              <% end  %>
+              <% end %>
             </ul>
-          </div>        
+          </div>
         </div>
-      <% end  %>  
+      <% end  %>
     </section>
   </section>
 </main>
-

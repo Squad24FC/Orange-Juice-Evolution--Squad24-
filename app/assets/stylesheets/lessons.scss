@@ -74,10 +74,11 @@
 .check-icon {
   color: var(--gray-10);
   font-size: 1.25rem;
+}
 
-  &:hover {
-    color: var(--orange-100);
-  }
+.check-icon-done {
+  color: var(--orange-100);
+  font-size: 1.25rem;
 }
 
 .button-start-lesson {
