@@ -1,6 +1,8 @@
 <nav>
   <div class="nav-container">
-    <img class='nav-logo' src="https://d335luupugsy2.cloudfront.net/cms/files/107693/1654526197/$g74vm2w5o56" alt="Orange Juice Logo Branco">
+    <%= link_to root_path, class: "nav-logo" do %>
+      <%= image_tag "https://d335luupugsy2.cloudfront.net/cms/files/107693/1654526197/$g74vm2w5o56" %>
+    <% end %>
     <div class="nav-links">
       <span>Olá, <b>Erick</b>!</span>
     </div>
