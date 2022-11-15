@@ -1,45 +1,44 @@
-  <div class="track-container">
+<div class="track-container">
 
-    <h1>Minhas Trilhas</h1>
-    <div class="tracks-list">
-      <% @tracks.each do |track| %>
-        <div class="track-card">
-          <div class='thumb-url-holder'>
-            <%= image_tag "#{track.thumb_url}", :class => 'thumb-url' %>
-          </div>
-          <div class="track-card-info">
-            <h3><%= link_to track.name, track_path(track) %></h2>
-            <div id="progress-body-coontainer">
-              <div id="progress-container">
-                <div id="circular-progress">
-                </div>
+  <h1>Minhas Trilhas</h1>
+  <div class="tracks-list">
+    <% @tracks.each do |track| %>
+      <div class="track-card">
+        <div class='thumb-url-holder'>
+          <%= image_tag "#{track.thumb_url}", :class => 'thumb-url' %>
+        </div>
+        <div class="track-card-info">
+          <h3><%= link_to track.name, track_path(track) %></h2>
+          <div id="progress-body-coontainer">
+            <div id="progress-container">
+              <div id="circular-progress">
               </div>
             </div>
           </div>
         </div>
-      <% end %>
-    </div>
-
-    <div class="discord-box">
-      <span>Junte-se agora às nossas salas de estudo!</span>
-      <i class="fa-brands fa-discord fa-2x"></i>
-    </div>
-
-    <div class="links-section">
-    <div class="video-thumbs">
-        <h2>Conteúdos imperdíveis em vídeo</h2>
-        <div class='flex'>
-          <iframe width="350" height="200" src="https://www.youtube.com/embed/h89a4GoN3vw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe width="350" height="200" src="https://www.youtube.com/embed/yBSVgcO3HB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
       </div>
-      <div class="community-content">
-        <h2>Mais conteúdos da comunidade</h2>
-        <ul>
-          <li><i class="fa-brands fa-youtube fa-2x"></i> Canal Orange</li>
-          <li><i class="fa-brands fa-spotify fa-2x"></i> Orange Juice Cast</li>
-          <li><i class="fa-brands fa-twitch fa-2x"></i> Orange Talks</li>
-        </ul>
+    <% end %>
+  </div>
+
+  <div class="discord-box">
+    <span>Junte-se agora às nossas salas de estudo!</span>
+    <i class="fa-brands fa-discord fa-2x"></i>
+  </div>
+  <div class="links-section">
+  <div class="video-thumbs">
+      <h2>Conteúdos imperdíveis em vídeo</h2>
+      <div class='flex'>
+        <iframe width="350" height="200" src="https://www.youtube.com/embed/h89a4GoN3vw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="350" height="200" src="https://www.youtube.com/embed/yBSVgcO3HB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+    </div>
+    <div class="community-content">
+      <h2>Mais conteúdos da comunidade</h2>
+      <ul>
+        <li><i class="fa-brands fa-youtube fa-2x"></i> Canal Orange</li>
+        <li><i class="fa-brands fa-spotify fa-2x"></i> Orange Juice Cast</li>
+        <li><i class="fa-brands fa-twitch fa-2x"></i> Orange Talks</li>
+      </ul>
     </div>
   </div>
+</div>

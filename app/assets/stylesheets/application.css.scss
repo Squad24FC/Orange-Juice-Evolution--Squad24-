@@ -157,6 +157,14 @@
       margin-right: 1rem;
     }
   }
+
+  .users-container {
+    width: 50%;
+  }
+
+  .login-splash {
+    display: none;
+  }
 }
 
 // TABLET
@@ -192,6 +200,14 @@
       margin-right: 1rem;
     }
   }
+
+  .users-container {
+    width: 50%;
+  }
+
+  .login-splash {
+    display: none;
+  }
 }
 
 // SMARTPHONE
@@ -226,5 +242,14 @@
       width: 5rem;
       margin-right: 1rem;
     }
+  }
+
+  .login-splash {
+    display: none;
+  }
+
+  .users-container {
+    margin-top: 0;
+    height: 100vh;
   }
 }
