@@ -27,7 +27,11 @@
 
       <% @subject.lessons.each do |lesson| %>
       <div class="lesson-card">
-        <i class="fa-solid fa-circle-check check-icon"></i>
+        <% if lesson.completed %>
+          <i class="fa-solid fa-circle-check check-icon-done"></i>
+                <% else %>
+          <i class="fa-solid fa-circle-check check-icon"></i>
+        <% end %>
         <div class="lesson-info">
           <p class="lesson-card-title"><%= lesson.name %></p>
           <p class="lesson-length"><%= "#{lesson.duration} minutos" %></p>
