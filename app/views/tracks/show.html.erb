@@ -6,7 +6,7 @@
   <section class = "track-show-content">
 
     <section class = "track-show-heading">
-    <%= link_to '←', root_path , style:'back-button' %>
+    <%= link_to '← Voltar', root_path , style:'back-button' %>
     <h2> CONTEÚDO </h2> 
     </section>
 
@@ -29,7 +29,7 @@
                     <i class="fa-regular fa-circle fa-2x"></i>
                   <% end %>
                 </div>  
-                <%= link_to subject.name, track_chapter_subject_lessons_path(@track,chapter,subject) %>
+                <%= link_to subject.name, track_chapter_subject_lessons_path(@track,chapter,subject), class: "track-show-lesson-link" %>
                 
                 <div class = "track-show-subjects-type">
                   <% subject.lessons.each do | lesson | %>
