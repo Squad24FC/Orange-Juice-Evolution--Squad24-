@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_11_192456) do
+ActiveRecord::Schema.define(version: 2022_11_15_141149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "chapters", force: :cascade do |t|
     t.string "name"
-    t.string "thumb_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "track_id", null: false
+    t.boolean "completed", default: false
     t.index ["track_id"], name: "index_chapters_on_track_id"
   end
 
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2022_11_11_192456) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "subject_id", null: false
+    t.boolean "completed", default: false
     t.index ["subject_id"], name: "index_lessons_on_subject_id"
   end
 
@@ -56,9 +57,9 @@ ActiveRecord::Schema.define(version: 2022_11_11_192456) do
   create_table "tracks", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "thumb_url", default: "", null: false
-    t.text "description", default: "", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "progress", default: 0
   end
 
   create_table "users", force: :cascade do |t|
