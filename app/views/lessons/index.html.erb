@@ -32,7 +32,16 @@
           <p class="lesson-card-title"><%= lesson.name %></p>
           <p class="lesson-length"><%= "#{lesson.duration} minutos" %></p>
         </div>
-        <i class="fa-solid fa-newspaper type-icon"></i>
+        <div class="lesson-type-icon">
+          <% case lesson.lesson_type_before_type_cast %>
+            <% when (0..4) %>
+              <i class="fa-regular fa-file-lines"></i>
+            <% when (4..6) %>
+              <i class="fa-regular fa-circle-play"></i>
+            <% when 7 %>
+              <i class="fa-sharp fa-solid fa-headphones"></i>
+          <% end %>
+        </div>
       </div>
       <% end %>
 
