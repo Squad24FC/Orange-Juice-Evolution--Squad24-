@@ -51,7 +51,7 @@
 .track-show-chapters {
     width: 100%;
     margin-top: 41px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    
 }
 
 .track-show-subjects li{
@@ -63,21 +63,20 @@
     margin: 0.2% 0;
     background-color: white;
     height: 87px;
-
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .track-show-subjects-check {
     display: flex;
     align-items: center;
     flex: 0;
-
 }
 
 .track-show-subjects li a {
     flex: 5;
     padding: 0 3%;
     text-decoration: none;
-    font-size: var(--h3);
+    font-size: var(--text);
 }
 
 .track-show-subjects-type {
@@ -89,8 +88,7 @@
     gap: 3%;
 }
 
-
-.track-show-subjects li a:link, a:visited {
+.track-show-lesson-link {
     color: black;
 }
 

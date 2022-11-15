@@ -1,9 +1,9 @@
 
 <%= render partial: "shared/header_track_name.html" %>
 
-<div class="lessons-container flex">
+<div class="lessons-container">
   <section class="lessons-content">
-    <%= link_to '←', :back, style:'back-button' %>
+    <%= link_to '← Voltar', :back, style:'back-button' %>
     <% @subject.lessons.each do |lesson| %>
     <h2><%= lesson.name %></h2>
     <p class='lesson-description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ullam eveniet veritatis expedita consequatur recusandae ex illum impedit aliquam, cupiditate est similique quaerat, porro vel. Maiores commodi ullam consectetur voluptatibus!</p>
@@ -21,13 +21,17 @@
     <%= link_to 'Iniciar aula', "http://#{lesson.source_url}", :class => "button-start-lesson" %>
     <% end %>
   </section>
-  <section>
+  <div class='lesson-cards-section'>
     <p class='lesson-breadcrumb'><%= @chapter.name %> > <%= @subject.name %></p>
     <div class="lessons-list">
 
       <% @subject.lessons.each do |lesson| %>
       <div class="lesson-card">
-        <i class="fa-solid fa-circle-check check-icon"></i>
+        <% if lesson.completed %>
+          <i class="fa-solid fa-circle-check check-icon-done"></i>
+                <% else %>
+          <i class="fa-solid fa-circle-check check-icon"></i>
+        <% end %>
         <div class="lesson-info">
           <p class="lesson-card-title"><%= lesson.name %></p>
           <p class="lesson-length"><%= "#{lesson.duration} minutos" %></p>
@@ -46,5 +50,5 @@
       <% end %>
 
     </div>
-  </section>
+  </div>
 </div>

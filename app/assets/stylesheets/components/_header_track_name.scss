@@ -4,7 +4,8 @@
     justify-content: center;
     background-color: #131313A6;
     color: white;
-    font-size: var(--h1);
+    font-size: var(--h2);
+    font-weight: var(--bold);
     height: 120px ;
     width: 100%;
 }
@@ -19,7 +20,7 @@
 }
 
 .header-track-name img {
-    width: 109px;
+  width: 5rem;
 }
 
 .header-track-name figcaption {
