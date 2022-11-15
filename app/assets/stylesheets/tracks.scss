@@ -43,6 +43,11 @@
     flex-direction: column;
     margin: 2%;
     justify-content: flex-start;
+
+    transition: transform .4s;
+    &:hover {
+        transform: scale(1.15);
+      }
 }
 
 .track-name {
@@ -84,7 +89,6 @@ p{
     margin: 0.5rem;
 
     text-align: end; 
-
 }
 
 .extra-container {
@@ -133,8 +137,13 @@ p{
     
     color: #000000;
 } 
-#p-title-study-room{
+#p-title-study-room,
+.p-title-community-content{
     width: 354px;
+    transition: transform .4s;
+    &:hover {
+        transform: scale(1.20);
+    }
 }
 .p-title-community-content,
 #p-title-study-room {

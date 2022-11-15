@@ -1,29 +1,38 @@
 <div id="my-track-header">Conheça nossas trilhas</div>
 <div class="main-container">
-    <section class="tracks-container">
-      <% @tracks.each do |track| %>
-        <div id="show-track"> 
-          <a href="<%= track_path(track) %>">
-            <img src="<%= track.thumb_url %>" class="image-url">
-          </a>           
-          <h3 class="track-name"><%= link_to track.name, track_path(track) %></h3>
-        </div>
-        <% end %>
-      </section>
-
-    <div class="extra-container">
-      <div class="study-room-container">
-        <h3 id="title-study-room">Salas de estudo</h3>
-        <a href="https://discord.gg/orangejuicetech">
-          <p id="p-title-study-room"><i class="fa-brands fa-discord fa-2x" ></i>Conheça os servidores da Orange Evolution</p>
+  <section class="tracks-container">
+    <% @tracks.each do |track| %>
+      <div id="show-track">
+        <a href="<%= track_path(track) %>">
+          <img src="<%= track.thumb_url %>" class="image-url">
         </a>
+        <h3 class="track-name">
+          <%= link_to track.name, track_path(track) %>
+        </h3>
       </div>
-      
-      <div class="community-content-container">
-        <h3 id="title-community-content">Mais conteúdos da comunidade</h3>
-        <a href="https://www.youtube.com/c/OrangeJuicefc"><p class="p-title-community-content"><i class="fa-brands fa-youtube fa-2x"></i>Canal Orange</p></a>
-        <a href="https://open.spotify.com/show/5zy6DpF8V3N8rBbWO7OE79"><p class="p-title-community-content"><i class="fa-brands fa-spotify fa-2x"></i>Orange Juice Cast</p></a>
-        <a href="https://www.twitch.tv/orangejuice_tech"><p class="p-title-community-content"><i class="fa-brands fa-twitch fa-2x"></i>Orange Talks</p></a>
-      </div>
+      <% end %>
+  </section>
+
+  <div class="extra-container">
+    <div class="study-room-container">
+      <h3 id="title-study-room">Salas de estudo</h3>
+      <a href="https://discord.gg/orangejuicetech">
+        <p id="p-title-study-room"><i class="fa-brands fa-discord fa-2x"></i>Conheça os servidores da Orange Evolution
+        </p>
+      </a>
     </div>
+
+    <div class="community-content-container">
+      <h3 id="title-community-content">Mais conteúdos da comunidade</h3>
+      <a href="https://www.youtube.com/c/OrangeJuicefc">
+        <p class="p-title-community-content"><i class="fa-brands fa-youtube fa-2x"></i>Canal Orange</p>
+      </a>
+      <a href="https://open.spotify.com/show/5zy6DpF8V3N8rBbWO7OE79">
+        <p class="p-title-community-content"><i class="fa-brands fa-spotify fa-2x"></i>Orange Juice Cast</p>
+      </a>
+      <a href="https://www.twitch.tv/orangejuice_tech">
+        <p class="p-title-community-content"><i class="fa-brands fa-twitch fa-2x"></i>Orange Talks</p>
+      </a>
+    </div>
+  </div>
 </div>
