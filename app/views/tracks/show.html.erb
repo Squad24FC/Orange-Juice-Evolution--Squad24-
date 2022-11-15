@@ -6,8 +6,8 @@
   <section class = "track-show-content">
 
     <section class = "track-show-heading">
-    <%= link_to '←', root_path , style:'back-button' %>
-    <h2> CONTEÚDO </h2>
+    <%= link_to '← Voltar', root_path , style:'back-button' %>
+    <h2> CONTEÚDO </h2> 
     </section>
 
     <section class = "track-show-chapters-subjects">
@@ -28,9 +28,9 @@
                   <% else %>
                     <i class="fa-solid fa-circle-check check-icon"></i>
                   <% end %>
-                </div>
-                <%= link_to subject.name, track_chapter_subject_lessons_path(@track,chapter,subject) %>
 
+                </div>  
+                <%= link_to subject.name, track_chapter_subject_lessons_path(@track,chapter,subject), class: "track-show-lesson-link" %>
                 <div class = "track-show-subjects-type">
                   <% subject.lessons.each do | lesson | %>
                   <% @lessons_types.append(lesson.lesson_type_before_type_cast) %>
