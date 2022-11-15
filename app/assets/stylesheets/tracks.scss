@@ -4,10 +4,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    background-color: #F1F1F1;
 }
 #my-track-header {
     display: flex;
-    background: white ;
+    background: #F1F1F1 ;
     height: 100%;
     width: 70%;
     padding: 80px 0 15px 0;
@@ -25,7 +26,7 @@
 .main-container {
     display: flex;
     max-width: 70%;
-    background: white ;
+    background: #F1F1F1 ;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -41,6 +42,7 @@
     box-sizing: border-box;
     flex-direction: row;
     align-items: flex-start;
+    gap: 3rem;
 }
 
 #show-track {
@@ -60,25 +62,72 @@
     font-family: var(--default-font);
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 29px;
     color: #000000;
-
-}
-
-p{
     display: flex;
-    min-width: 284px;
-    min-height: 64px;
+    justify-content: space-between;
+    margin-block-start: 0;
     align-items: center;
 }
 
+
+#progress-body-container{
+    min-width: 30px;
+    min-height: 30px;
+    background: orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#progress-container{
+	display: flex;
+	width: 2rem;
+	padding: 1rem;
+	border-radius: 8px;
+	background: #F1F1F1;
+	flex-direction: column;
+	align-items: center;
+	justify-content:center;
+}
+
+#circular-progress{
+	position: relative;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background: conic-gradient(#f56434 160deg, #F1F1F1 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#circular-progress:before{
+    content: "";
+    height: 2%;
+    width: 2%;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #F1F1F1;
+    padding: 1rem;
+}
+
+.img-color-change{
+    width: 100%;
+}
+
 .image-url{
-    width: 365px;
-    height: 324px;
+    width: 25rem;
+    padding: 1rem;
+    //margin: 1rem;
     left: 360px;
     top: 406px;
     border-radius: 5%;
+    background: linear-gradient(89.6deg, #FF541B 19.61%, #FFA723 79.26%);
+    opacity: 0.85;
+    //filter: invert(1);  
 }
 
 .fa-youtube,
@@ -98,13 +147,19 @@ p{
     text-align: end; 
 }
 
+.discord-box{
+    background: #F1F1F1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
 .extra-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
-    margin: 0 0 0 5rem;
-    max-width: 100%;
+    //margin: 0 0 0 5rem;
+    width: 100%;
 }
 
 
@@ -152,6 +207,8 @@ p{
     height: 64px;
     left: 268px;
     top: 1080px;
+
+    align-items: center;
 
     font-family: var(--default-font);
     font-style: normal;
@@ -217,12 +274,18 @@ p{
     
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         letter-spacing: -0.408px;
     
         color: #000000;
     }
     
+    #progress-container{
+        margin: 1rem;
+        padding: 0;
+
+    }
+
     .main-container,
     #show-track {
         flex-direction: column;
@@ -286,7 +349,7 @@ p{
         
         
         display: flex;
-        align-items: flex-start;
+        align-items: flex-end;
         justify-content: center;
         text-align: center;
         letter-spacing: -0.408px;

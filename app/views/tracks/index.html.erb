@@ -1,26 +1,47 @@
 <div class="track-index">
-  <div id="my-track-header">Conheça nossas trilhas</div>
+  <% if user_signed_in? %>
+    <div id="my-track-header">Minhas trilhas</div>
+  <% else %>
+    <div id="my-track-header">Conheça nossas trilhas</div>
+  <% end %>
+
   <div class="main-container">
     <section class="tracks-container">
       <% @tracks.each do |track| %>
         <div id="show-track">
-          <a href="<%= track_path(track) %>">
+          <a href="<%= track_path(track) %>">     
             <img src="<%= track.thumb_url %>" class="image-url">
           </a>
-          <h3 class="track-name">
-            <%= link_to track.name, track_path(track) %>
-          </h3>
+          <div class="track-name">
+            <%= link_to track.name, track_path(track), class: "link-to-track-name" %>
+
+              <% if user_signed_in? %>
+                <div id="progress-body-coontainer">
+                  <div id="progress-container">
+                    <div id="circular-progress">
+                    </div>
+                  </div>
+                </div>
+                <% end %>
+
+              </div>
         </div>
         <% end %>
     </section>
 
     <div class="extra-container">
       <div class="study-room-container">
-        <h3 id="title-study-room">Salas de estudo</h3>
-        <a href="https://discord.gg/orangejuicetech">
-          <p id="p-title-study-room"><i class="fa-brands fa-discord fa-2x"></i>Conheça os servidores da Orange Evolution
-          </p>
-        </a>
+        <% if user_signed_in? %>
+          <h3 id="title-study-room">Minhas salas de estudo</h3>
+          <p id="p-title-study-room" class="discord-box"><i class="fa-brands fa-discord fa-2x"></i>Entrar na call
+        <% else %>
+          <h3 id="title-study-room">Salas de estudo</h3>
+          <a href="https://discord.gg/orangejuicetech">
+            <p id="p-title-study-room"><i class="fa-brands fa-discord fa-2x"></i>Conheça os servidores da Orange Evolution
+            </p>
+          </a>
+        
+          <% end %>
       </div>
 
       <div class="community-content-container">
