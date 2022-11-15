@@ -4,10 +4,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    background-color: #F1F1F1;
 }
 #my-track-header {
     display: flex;
-    background: white ;
+    background: #F1F1F1 ;
     height: 100%;
     width: 70%;
     padding: 80px 0 15px 0;
@@ -25,7 +26,7 @@
 .main-container {
     display: flex;
     max-width: 70%;
-    background: white ;
+    background: #F1F1F1 ;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -41,6 +42,7 @@
     box-sizing: border-box;
     flex-direction: row;
     align-items: flex-start;
+    gap: 3rem;
 }
 
 #show-track {
@@ -60,7 +62,7 @@
     font-family: var(--default-font);
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 29px;
     color: #000000;
     display: flex;
@@ -68,6 +70,7 @@
     margin-block-start: 0;
     align-items: center;
 }
+
 
 #progress-body-container{
     min-width: 30px;
@@ -84,7 +87,7 @@
 	width: 2rem;
 	padding: 1rem;
 	border-radius: 8px;
-	background: #fff;
+	background: #F1F1F1;
 	flex-direction: column;
 	align-items: center;
 	justify-content:center;
@@ -95,7 +98,7 @@
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
-    background: conic-gradient(#f56434 3.6deg, #ededed 0deg);
+    background: conic-gradient(#f56434 160deg, #F1F1F1 0deg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,18 +110,24 @@
     width: 2%;
     border-radius: 50%;
     position: absolute;
-    background-color: #fff;
+    background-color: #F1F1F1;
     padding: 1rem;
 }
 
+.img-color-change{
+    width: 100%;
+}
+
 .image-url{
-    width: 365px;
-    height: 324px;
+    width: 25rem;
+    padding: 1rem;
+    //margin: 1rem;
     left: 360px;
     top: 406px;
     border-radius: 5%;
-    background: black;
-    filter: invert(1);  
+    background: linear-gradient(89.6deg, #FF541B 19.61%, #FFA723 79.26%);
+    opacity: 0.85;
+    //filter: invert(1);  
 }
 
 .fa-youtube,
@@ -147,10 +156,10 @@
 .extra-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
-    margin: 0 0 0 5rem;
-    max-width: 100%;
+    //margin: 0 0 0 5rem;
+    width: 100%;
 }
 
 
@@ -340,7 +349,7 @@
         
         
         display: flex;
-        align-items: flex-start;
+        align-items: flex-end;
         justify-content: center;
         text-align: center;
         letter-spacing: -0.408px;
