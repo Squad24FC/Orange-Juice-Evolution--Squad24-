@@ -20,10 +20,13 @@
               <% @lessons_types.clear %>
               <li>
                 <div class = "track-show-subjects-check"> 
-                  <% if @completed %>
-                    <i class="fa-solid fa-clipboard-check fa-2x"></i>
+                  <% subject.lessons.each do | lesson | %>
+                  <% @chapter_completed = lesson.completed %>
+                  <% end %>
+                  <% if @chapter_completed %>                    
+                    <i class="fa-regular fa-circle-check fa-2x"></i>
                   <% else %>                    
-                    <i class="fa-regular fa-clipboard fa-2x"></i>
+                    <i class="fa-regular fa-circle fa-2x"></i>
                   <% end %>
                 </div>  
                 <%= link_to subject.name, track_chapter_subject_lessons_path(@track,chapter,subject) %>
