@@ -7,7 +7,22 @@
       <% if user_signed_in? %>
         <span>Olá, <b><%= current_user.email %></b><br>
         <small><%= link_to 'Sair', destroy_user_session_path, method: :delete, :class => 'text-button' %></small></span>
-        <%= image_tag "https://github.com/erickhwk.png", class:'nav-avatar' %>
+        <div class="dropdown">
+          <%= image_tag "https://github.com/erickhwk.png", class:'nav-avatar' %>
+          <div class="dropdown-content">
+            <%= link_to 'Editar Perfil', edit_user_registration_path, :class => 'a' %>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
       <% else %>
         <%= link_to 'Entrar', new_user_session_path, class: "nav-link" %>
       <% end %>
