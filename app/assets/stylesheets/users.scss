@@ -1,0 +1,65 @@
+.users-container {
+  max-width: 900px;
+  margin: 100px auto auto auto;
+  background-color: white;
+  padding: 5rem;
+  display: flex;
+  gap: 3rem;
+  min-height: 30vh;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  label {
+    display: block;
+    padding-bottom: .5rem;
+  }
+
+  .input-form {
+    height: 3rem;
+  }
+}
+
+.button-login {
+  background-color: var(--orange-100);
+  text-align: center;
+  display: block;
+  color: white;
+  font-weight: var(--bold);
+  padding: 1rem;
+  margin-top: 2rem;
+  border: 0;
+  width: 150px;
+  border-radius: 5px;
+}
+
+
+
+.login-splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  // background: url('https://lucky-zuccutto-95284a.netlify.app/assets/background.feb77ff3.svg');
+  background: var(--linear-gradient);
+  margin: -5rem;
+  border-radius: 0 5px 5px 0;
+}
+
+.logo-evolution {
+  width: 12rem;
+}
+
+.no-account {
+  font-size: var(--small);
+}
+
+.no-account-links {
+  margin-top: 1rem;
+}

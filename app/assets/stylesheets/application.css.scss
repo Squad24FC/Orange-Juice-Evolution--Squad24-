@@ -32,6 +32,7 @@
   --yellow-100: #FFA723;
   --gray-90: #0A0708;
   --gray-10: #f4f4f4;
+  --linear-gradient: linear-gradient(89.6deg, #FF541B 19.61%, #FFA723 79.26%);
 
   --card-background: #fff;
 
@@ -74,7 +75,6 @@
   textarea {
     font-size: var(--text);
     font-family: var(--default-font);
-    color: var(--text-color);
   }
 
   body {
