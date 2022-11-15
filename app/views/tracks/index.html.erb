@@ -7,8 +7,15 @@
           <a href="<%= track_path(track) %>">
             <img src="<%= track.thumb_url %>" class="image-url">
           </a>
-          <h3 class="track-name">
+          <h3 class="track-name" value-progress="76">
             <%= link_to track.name, track_path(track) %>
+            <div id="progress-body-coontainer">
+              <div id="progress-container">
+                <div id="circular-progress">
+                  <!-- <span id="progress-value"></span> -->
+                </div>
+              </div>
+            </div>
           </h3>
         </div>
         <% end %>
