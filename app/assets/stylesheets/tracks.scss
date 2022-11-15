@@ -63,7 +63,52 @@
     font-size: 24px;
     line-height: 29px;
     color: #000000;
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: 0;
+    align-items: center;
+}
 
+#progress-body-container{
+    min-width: 30px;
+    min-height: 30px;
+    background: orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#progress-container{
+	display: flex;
+	width: 2rem;
+	padding: 1rem;
+	border-radius: 8px;
+	background: #fff;
+	flex-direction: column;
+	align-items: center;
+	justify-content:center;
+}
+
+#circular-progress{
+	position: relative;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background: conic-gradient(#f56434 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#circular-progress:before{
+    content: "";
+    height: 2%;
+    width: 2%;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+    padding: 1rem;
 }
 
 .image-url{
@@ -72,6 +117,8 @@
     left: 360px;
     top: 406px;
     border-radius: 5%;
+    background: black;
+    filter: invert(1);  
 }
 
 .fa-youtube,
@@ -89,6 +136,12 @@
     margin: 0.5rem;
 
     text-align: end; 
+}
+
+.discord-box{
+    background: #F1F1F1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 .extra-container {
@@ -145,6 +198,8 @@
     height: 64px;
     left: 268px;
     top: 1080px;
+
+    align-items: center;
 
     font-family: var(--default-font);
     font-style: normal;
@@ -210,12 +265,18 @@
     
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         letter-spacing: -0.408px;
     
         color: #000000;
     }
     
+    #progress-container{
+        margin: 1rem;
+        padding: 0;
+
+    }
+
     .main-container,
     #show-track {
         flex-direction: column;
