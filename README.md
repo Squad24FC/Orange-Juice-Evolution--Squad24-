@@ -60,7 +60,7 @@ rails s
 
 ## ✒️ Autores
 
-|_Erick Costa_|_Bruno Soares_|_Alexander de Morais_|_Ruan Mata_|
+|_Erick Costa_|_Bruno Soares_|_Alexsander de Morais_|_Ruan Mata_|
 |---|---|---|---|
 |<img src="https://avatars.githubusercontent.com/u/98691076?v=4" width="140">|<img src="https://avatars.githubusercontent.com/u/48768035?v=4" width="140">|<img src="https://avatars.githubusercontent.com/u/82005278?v=4" width="140">|<img src="https://media-exp1.licdn.com/dms/image/C4E03AQEjn1whE5egnw/profile-displayphoto-shrink_200_200/0/1641593318961?e=1674086400&v=beta&t=0mbsW_WZRr0NIgjRMc2FO8sNu4krYQcdtbeIq1JXiKs" width="140">
 _*Desenvolvedor*_|_*Desenvolvedor*_|_*Desenvolvedor*_|_*UI/UX Designer*_|
