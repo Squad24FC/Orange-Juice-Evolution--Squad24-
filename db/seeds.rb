@@ -41,7 +41,6 @@ Track.create([{
 10.times do
   Chapter.create([{
                 name: Faker::Book.title,
-                completed: [true, false].sample,
                 track_id: rand(1..Track.all.count)    
               }])
 end
@@ -51,6 +50,7 @@ end
 20.times do
   Subject.create([{ 
                 name: Faker::Book.title,
+                completed: false,
                 chapter_id: rand(1..Chapter.all.count)                       
                 }])
 end
