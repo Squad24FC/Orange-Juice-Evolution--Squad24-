@@ -1,61 +1,44 @@
-<div class="track-index">
-  <% if user_signed_in? %>
-    <div id="my-track-header">Minhas trilhas</div>
-  <% else %>
-    <div id="my-track-header">Conheça nossas trilhas</div>
-  <% end %>
+<div class="track-container">
 
-  <div class="main-container">
-    <section class="tracks-container">
-      <% @tracks.each do |track| %>
-        <div id="show-track">
-          <a href="<%= track_path(track) %>">     
-            <img src="<%= track.thumb_url %>" class="image-url">
-          </a>
-          <div class="track-name">
-            <%= link_to track.name, track_path(track), class: "link-to-track-name" %>
-
-              <% if user_signed_in? %>
-                <div id="progress-body-coontainer">
-                  <div id="progress-container">
-                    <div id="circular-progress">
-                    </div>
-                  </div>
-                </div>
-                <% end %>
-
-              </div>
+  <h1>Minhas Trilhas</h1>
+  <div class="tracks-list">
+    <% @tracks.each do |track| %>
+      <div class="track-card">
+        <div class='thumb-url-holder'>
+          <%= image_tag "#{track.thumb_url}", :class => 'thumb-url' %>
         </div>
-        <% end %>
-    </section>
-
-    <div class="extra-container">
-      <div class="study-room-container">
-        <% if user_signed_in? %>
-          <h3 id="title-study-room">Minhas salas de estudo</h3>
-          <p id="p-title-study-room" class="discord-box"><i class="fa-brands fa-discord fa-2x"></i>Entrar na call
-        <% else %>
-          <h3 id="title-study-room">Salas de estudo</h3>
-          <a href="https://discord.gg/orangejuicetech">
-            <p id="p-title-study-room"><i class="fa-brands fa-discord fa-2x"></i>Conheça os servidores da Orange Evolution
-            </p>
-          </a>
-        
-          <% end %>
+        <div class="track-card-info">
+          <h3><%= link_to track.name, track_path(track) %></h2>
+          <div id="progress-body-coontainer">
+            <div id="progress-container">
+              <div id="circular-progress">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    <% end %>
+  </div>
 
-      <div class="community-content-container">
-        <h3 id="title-community-content">Mais conteúdos da comunidade</h3>
-        <a href="https://www.youtube.com/c/OrangeJuicefc">
-          <p class="p-title-community-content"><i class="fa-brands fa-youtube fa-2x"></i>Canal Orange</p>
-        </a>
-        <a href="https://open.spotify.com/show/5zy6DpF8V3N8rBbWO7OE79">
-          <p class="p-title-community-content"><i class="fa-brands fa-spotify fa-2x"></i>Orange Juice Cast</p>
-        </a>
-        <a href="https://www.twitch.tv/orangejuice_tech">
-          <p class="p-title-community-content"><i class="fa-brands fa-twitch fa-2x"></i>Orange Talks</p>
-        </a>
+  <div class="discord-box">
+    <span>Junte-se agora às nossas salas de estudo!</span>
+    <i class="fa-brands fa-discord fa-2x"></i>
+  </div>
+  <div class="links-section">
+  <div class="video-thumbs">
+      <h2>Conteúdos imperdíveis em vídeo</h2>
+      <div class='flex'>
+        <iframe width="350" height="200" src="https://www.youtube.com/embed/h89a4GoN3vw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="350" height="200" src="https://www.youtube.com/embed/yBSVgcO3HB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+    </div>
+    <div class="community-content">
+      <h2>Mais conteúdos da comunidade</h2>
+      <ul>
+        <li><i class="fa-brands fa-youtube fa-2x"></i> Canal Orange</li>
+        <li><i class="fa-brands fa-spotify fa-2x"></i> Orange Juice Cast</li>
+        <li><i class="fa-brands fa-twitch fa-2x"></i> Orange Talks</li>
+      </ul>
     </div>
   </div>
 </div>
