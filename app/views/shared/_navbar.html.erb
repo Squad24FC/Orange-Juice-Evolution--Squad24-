@@ -4,8 +4,13 @@
       <%= image_tag "https://d335luupugsy2.cloudfront.net/cms/files/107693/1654526197/$g74vm2w5o56" %>
     <% end %>
     <div class="nav-links">
-      <span>Olá, <b>Erick</b>!</span>
+      <% if user_signed_in? %>
+        <span>Olá, <b><%= current_user.email %></b><br>
+        <small><%= link_to 'Sair', destroy_user_session_path, method: :delete, :class => 'text-button' %></small></span>
+        <%= image_tag "https://github.com/erickhwk.png", class:'nav-avatar' %>
+      <% else %>
+        <%= link_to 'Entrar', new_user_session_path, class: "nav-link" %>
+      <% end %>
     </div>
-    <img class='nav-avatar' src="https://github.com/erickhwk.png" alt="">
   </div>
 </nav>
