@@ -49,7 +49,6 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 2%;
     justify-content: flex-start;
 
     transition: transform .4s;
@@ -199,6 +198,7 @@
     transition: transform .4s;
     &:hover {
         transform: scale(1.10);
+        cursor: pointer;
     }
 }
 .p-title-community-content,
