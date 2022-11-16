@@ -48,7 +48,11 @@ Para iniciar a aplicação é necessário dar um git clone no projeto e, pelo co
 ```
 bundle
 ```
-2 - Iniciar a aplicação utilizando o servidor do rails:
+2 - Criar o banco de dados e populá-lo:
+```
+rails db:create db:migrate db:seed
+```
+3 - Iniciar a aplicação utilizando o servidor do rails:
 ```
 rails s
 ```
