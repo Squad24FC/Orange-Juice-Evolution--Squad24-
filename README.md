@@ -56,7 +56,7 @@ rails db:create db:migrate db:seed
 ```
 rails s
 ```
-3 - Acessar a aplicação através de http://localhost:3000/
+4 - Acessar a aplicação através de http://localhost:3000/
 ## 🛠️ Construído com
 
 
