@@ -33,6 +33,16 @@ Seguir [tutorial](https://github.com/lewagon/setup/blob/master/windows.md) apena
 ```
 * Caso seu SO seja Linux basta começar a partir do item 2.
 
+Para usuários de MaCOS, é necessário instalar o Homebrew:
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Em seguida, atualizá-lo:
+
+```
+brew update
+```
+
 Instalação do Rails 
 
 ```
