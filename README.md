@@ -4,6 +4,9 @@ O Orange Evolution é uma plataforma associada a comunidade da Orange Juice com 
 <br/>
 O acesso é feito mediante cadastro de e-mail e permite acesso aos conteúdos da trilha escolhida, que pode ser inclusive as três ao mesmo tempo. A plataforma ainda assiste o usuário em relação ao progresso feito através de indicadores que podem ser visualizados em todas as páginas, e que são atualizados quando o usuário sinaliza que um conteúdo já foi concluído.
 
+## 🌎 Produção
+https://orange-evolution-squad24.herokuapp.com/
+
 ## 🚀 Começando
 
 Essas instruções **permitirão** que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
