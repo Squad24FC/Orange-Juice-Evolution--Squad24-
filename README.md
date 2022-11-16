@@ -86,6 +86,6 @@ _*Desenvolvedor*_|_*Desenvolvedor*_|_*Desenvolvedor*_|_*UI/UX Designer*_|
 
 ## 📄 Licença
 
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
+Este projeto está sob a licença MIT.
 
 ---
