@@ -47,6 +47,7 @@ Para iniciar a aplicação é necessário dar um git clone no projeto e, pelo co
 1 - Baixar as dependências necessárias:
 ```
 bundle
+bundle exec rake webpacker:install
 ```
 2 - Criar o banco de dados e populá-lo:
 ```
